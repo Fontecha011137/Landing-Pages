@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgb(241, 210, 210);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  height: 100px;
+  object-fit: contain;
+}
+
+header a {
+  text-decoration: none;
+  color: #ff4da6;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  background: #ff4da6;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* BOTONES */
+.btn {
+  background: white;
+  color: #ff4da6;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* SECCIONES */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  width: 250px;
+  margin: 15px;
+  font-size: 18px;
+}
+
+/* CTA */
+.cta {
+  background: #111;
+  color: white;
+}
+
+/* TESTIMONIOS */
+.testimonials {
+  background: #f9f9f9;
+}
+
+/* FAQ */
+.faq {
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+
+.faq h4 {
+  margin-top: 20px;
+}
+
+/* PRE FOOTER */
+.prefooter {
+  background: #ff4da6;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+}
