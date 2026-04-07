@@ -98,21 +98,41 @@ section {
   color: black;
 }
 /* Estilo general del formulario */
-#formLead {
+/* Contenedor del formulario como flex vertical */
+form#formLead {
   display: flex;
-  flex-direction: column; /* apila inputs verticalmente */
-  gap: 15px; /* espacio entre campos */
-  max-width: 150px; /* opcional: limita ancho del formulario */
-  margin: auto; /* centra en la página */
+  flex-direction: column; /* elementos apilados verticalmente */
+  gap: 15px;             /* espacio entre inputs */
 }
 
-/* Botón centrado y siempre debajo */
-#formLead .btn {
-  width: 80%; /* ocupa todo el ancho del formulario */
-  max-width: 300px; /* opcional para no estirarlo demasiado */
-  align-self: center; /* lo centra horizontalmente */
+form#formLead {
+  display: flex;
+  flex-direction: column;  /* apilar inputs verticalmente */
+  align-items: center;     /* centrar todos los elementos horizontalmente */
+  gap: 15px;               /* espacio entre inputs */
 }
 
+/* Inputs del formulario */
+form#formLead input {
+  width: 30%;              /* ocupan solo el 50% de la pantalla */
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;  /* para que padding no aumente el ancho */
+}
+
+/* Botón del formulario */
+form#formLead .btn {
+  align-self: center;       /* siempre centrado */
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #ff4da6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
 /* FOOTER */
 footer {
   background: #ff4da6;
@@ -120,17 +140,12 @@ footer {
   padding: 20px;
 }
 
-@media (max-width: 768px){
-  #formLead {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* espacio entre inputs */
-  }
-
-  #formLead .btn {
-    margin-top: auto; /* fuerza al final */
-    width: 100%;
-    max-width: 300px;
-    align-self: center;
+/* Responsivo: botón centrado en móviles */
+/* Responsivo: inputs y botón en móviles */
+@media (max-width: 768px) {
+  form#formLead input,
+  form#formLead .btn {
+    width: 90%;       /* casi todo el ancho en móviles */
+    align-self: center; /* centrar botón (y otros elementos si aplica) */
   }
 }
