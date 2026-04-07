@@ -97,6 +97,21 @@ section {
    background: rgb(235, 166, 166);
   color: black;
 }
+/* Estilo general del formulario */
+#formLead {
+  display: flex;
+  flex-direction: column; /* apila inputs verticalmente */
+  gap: 15px; /* espacio entre campos */
+  max-width: 150px; /* opcional: limita ancho del formulario */
+  margin: auto; /* centra en la página */
+}
+
+/* Botón centrado y siempre debajo */
+#formLead .btn {
+  width: 80%; /* ocupa todo el ancho del formulario */
+  max-width: 300px; /* opcional para no estirarlo demasiado */
+  align-self: center; /* lo centra horizontalmente */
+}
 
 /* FOOTER */
 footer {

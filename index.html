@@ -104,27 +104,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <img src="logo.png" alt="BELLEXZA logo">
   </div>
   <h2>Belleza es una página pensada para ti</h2>
-  <p>Queremos atenderte como te mereces</p>
- 
+  <p>Queremos atenderte como te mereces</p> 
 </section>
+
 <section class="cta">
-  <h2>Déjanos tus datos y te contactamos</h2>
+  <h2>Déjanos tus datos</h2>
+  <form id="formLead" action="URL_DE_HONEYPOT" method="POST">
+    
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Tu número de celular" required>
 
-  <form id="formLead">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Correo" required>
-    <input type="celular" placeholder="Celular" required>
+    <!-- Honeypot: campo oculto para bots -->
+    <input type="text" name="telefono2" id="telefono2" style="position:absolute; left:-9999px;">
 
-    <!-- HONEYPOT -->
-    <input type="text" id="telefono2" style="position:absolute; left:-9999px;">
-
-    <button type="submit">Enviar</button>
+    <button type="submit" class="btn">Enviar</button>
   </form>
 </section>
 <!-- FOOTER -->
 <footer>
   <p>© 2026 BELLEZA</p>
 </footer>
+
+<script src="index.js"></script>
 
 </body>
 </html>
