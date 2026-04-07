@@ -94,13 +94,28 @@ section {
   color: white;
 }
 .prefooter-dos{
-   background: rgb(241, 210, 210);
+   background: rgb(235, 166, 166);
   color: black;
 }
 
 /* FOOTER */
 footer {
-  background: #111;
+  background: #ff4da6;
   color: white;
   padding: 20px;
+}
+
+@media (max-width: 768px){
+  #formLead {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* espacio entre inputs */
+  }
+
+  #formLead .btn {
+    margin-top: auto; /* fuerza al final */
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
+  }
 }
