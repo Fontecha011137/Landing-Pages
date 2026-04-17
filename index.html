@@ -34,36 +34,96 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+
+  <section class="hero">
+  <h2 id="saludo" class="saludo"></h2>
+
+ <div class="carousel-container">
+    <button class="btn-nav prev" id="btnPrev">❮</button>
+
+    <div class="carousel-window">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="slide">
+                <img src="img/decorado.jpg" alt="Uñas">
+                <p>Diseños de uñas profesionales </p>
+            </div>
+            <div class="slide">
+                <img src="img/pestañas.jpg" alt="Pestañas">
+                <p>Extensiones de pestañas ✨</p>
+            </div>
+            <div class="slide">
+                <img src="img/cejas.jpg" alt="Cejas">
+                <p>Arreglo de cejas </p>
+            </div>
+            <div class="slide">
+                <img src="img/depilacion.jpg" alt="Depilación">
+                <p>Depilación corporal profesional </p>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-nav next" id="btnNext">❯</button>
+</div>
+
   <h1>Tu belleza, más fácil que nunca</h1>
   <p>Reserva servicios de belleza en segundos desde tu celular</p>
-  <a href="https://fontecha011137.github.io/PWA_BELLEXZA/" class="btn">
-    Probar ahora
-  </a>
+
+
 </section>
 
 <!-- BENEFICIOS -->
 <section>
   <h2>¿Por qué elegir BELLEZA?</h2>
   <div class="features">
-    <div class="feature">💄 Reserva sin complicaciones</div>
-    <div class="feature">⚡ Atención rápida</div>
-    <div class="feature">📱 Funciona como app</div>
+    <div class="feature"><img src="icon/chat.png" alt=""><h2>Reserva sin complicaciones</h2><br>
+    Agenda tu cita fácilmente desde cualquier lugar, sin perder tiempo.</div>
+    <div class="feature"><img src="icon/dialog.png" alt=""><h2>Atención rápida y sin <esperas></h2><br>
+    Olvídate de filas o retrasos, tu tiempo es prioridad.</div>
+    <div class="feature"><img src="icon/booking.png" alt=""><h2>Funciona como una app en tu celular</h2><br>
+    Accede rápido, sin instalar nada y desde cualquier dispositivo.</div>
+        <div class="feature"><img src="icon/communication.png" alt=""><h2>Servicios profesionales y confiables</h2><br>
+    Trabajamos con expertos para garantizar resultados de calidad.</div>
+       <div class="feature"><img src="icon/quality.png" alt=""><h2>Experiencia cómoda y segura</h2><br>
+    Diseñado para que te sientas tranquila en cada paso.</div>
   </div>
 </section>
 
 <!-- CTA INTERMEDIO -->
 <section class="cta">
-  <h2>Agenda tu cita ahora</h2>
-  <a href="https://fontecha011137.github.io/PWA_BELLEXZA/" class="btn">
-    Empezar
-  </a>
-</section>
+  <h2>Registrate y recive descuentos en todos nuestros servicios</h2><br>
+  <p>Es por poco tiempo</p> <br>
+
+  <form id="formLead" action="https://formspree.io/f/mykbojqy" method="POST">
+    
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Tu número de celular" required>
+
+    <!-- Honeypot: campo oculto para bots -->
+    <input type="text" name="telefono2" id="telefono2" style="position:absolute; left:-9999px;">
+
+    <button type="submit" class="btn">Enviar</button>
+  </form>
 
 <!-- EXPLICACIÓN -->
-<section>
-  <h2>¿Cómo funciona?</h2>
-  <p>Explora servicios, selecciona tu favorito y agenda en segundos.</p>
+
+  <section class="servicios">
+  <h2>Servicios de belleza</h2>
+
+  <p><h2>En BELLEZA pensamos en tu comodidad, encontrarás servicios como:</h2></p>
+
+  <ul>
+    <li> <h3>Manicure y pedicure</h3></li>
+    <li> <h3>Arreglo de tus cejas</h3></li>
+    <li> <h3>Depilación profesional</h3></li>
+    <li> <h3>Arreglo de tus cejas</h3></li>
+  </ul>
+
+  <p>
+    <h4>Cada servicio está pensado para ofrecerte calidad, comodidad 
+      y resultados que superen tus expectativas,<br> 
+      nuestros servicios son prestados por profesionales en cada una de las areas.</h4>
+  </p>
 </section>
 
 <!-- TESTIMONIOS -->
