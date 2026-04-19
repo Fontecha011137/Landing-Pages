@@ -74,3 +74,58 @@ document.addEventListener("DOMContentLoaded", () => {
         autoPlay = setInterval(moveNext, 5000);
     }
 });
+
+const form = document.getElementById("formExperiencia");
+const lista = document.getElementById("listaComentarios");
+
+// cargar comentarios guardados (opcional)
+let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+function mostrarComentarios() {
+  lista.innerHTML = "";
+
+  comentarios.slice(-5).reverse().forEach(c => {
+    const div = document.createElement("div");
+    div.classList.add("testimonio");
+
+    div.innerHTML = `
+      <p>"${c.texto}"</p>
+      <span>${c.estrellas} - ${c.nombre}</span>
+    `;
+
+    lista.appendChild(div);
+  });
+}
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = this.querySelector("input").value;
+  const texto = this.querySelector("textarea").value;
+  const estrellas = this.querySelector("select").value;
+
+  comentarios.push({ nombre, texto, estrellas });
+
+  localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+  mostrarComentarios();
+  this.reset();
+});
+
+// mostrar al cargar
+mostrarComentarios();
+//Preguntas frecuentes//
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const answer = btn.nextElementSibling;
+
+    // cerrar otros
+    document.querySelectorAll(".faq-answer").forEach(a => {
+      if (a !== answer) a.style.display = "none";
+    });
+
+    // toggle
+    answer.style.display = 
+      answer.style.display === "block" ? "none" : "block";
+  });
+});

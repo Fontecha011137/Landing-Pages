@@ -1,4 +1,14 @@
-
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 header {
   position: fixed;
   top: 0;
@@ -11,8 +21,15 @@ header {
   justify-content: space-between;
 
   padding: 15px 0; /* 👈 sin padding lateral */
-  background: rgb(241, 210, 210); /* 👈 tu color */
+  background: rgb(182, 64, 131); /* 👈 tu color */
   box-sizing: border-box;
+}
+header {
+  padding: 15px 20px;
+}
+
+header a {
+  margin-right: 0;
 }
 
 header a {
@@ -32,6 +49,9 @@ header a {
   height: 100px;
   object-fit: contain;
   margin-left: 20px;
+}
+section {
+  width: 100%;
 }
 
 
@@ -62,6 +82,7 @@ header a {
 
 /* SECCIONES */
 section {
+  width: 100%;
   padding: 60px 20px;
   text-align: center;
 }
@@ -82,37 +103,72 @@ section {
   width: 80px;
 }
 
-/* CTA */
-.cta {
-  background: #111;
-  color: white;
+
+.servicios{
+  width: 100%;
+}
+.servicios img{
+  width: 80px;
+}
+.servicios ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px; /* espacio entre items */
+}
+
+.servicios li {
+  display: flex;
+  flex-direction: column; /* icono arriba */
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+ 
 }
 
 /* TESTIMONIOS */
 .testimonials {
-  background: #f9f9f9;
+  background: #f6bbcb;
 }
 
 /* FAQ */
 .faq {
-  text-align: left;
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
+  padding: 60px 20px;
+  text-align: left;
 }
 
 .faq h4 {
   margin-top: 20px;
 }
 
-/* PRE FOOTER */
-.prefooter {
+.faq-item {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  border: none;
   background: #ff4da6;
   color: white;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
 }
-.prefooter-dos{
-   background: rgb(235, 166, 166);
-  color: black;
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background: white;
 }
+
+
 /* Estilo general del formulario */
 /* Contenedor del formulario como flex vertical */
 form#formLead {
@@ -129,13 +185,16 @@ form#formLead {
 }
 
 /* Inputs del formulario */
-form#formLead input {
-  width: 30%;              /* ocupan solo el 50% de la pantalla */
+form#formLead input {              /* ocupan solo el 50% de la pantalla */
   padding: 10px 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
   box-sizing: border-box;  /* para que padding no aumente el ancho */
+}
+form#formLead input {
+  width: 100%;
+  max-width: 400px;
 }
 
 /* Botón del formulario */
@@ -154,6 +213,27 @@ footer {
   background: #ff4da6;
   color: white;
   padding: 20px;
+
+  display: flex;
+  justify-content: space-between; /* 👈 separa izquierda y derecha */
+  align-items: center;
+}
+
+/* BOTÓN */
+.btn-top {
+  padding: 10px 18px;
+  background: white;
+  color: #ff4da6;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.btn-top:hover {
+  background: #ffe0ef;
+  transform: translateY(-3px);
 }
 
 .carousel-container {
@@ -217,7 +297,7 @@ footer {
 }
 .servicios{
   margin-top: 20px;
-background-color: #ff4da6;
+background-color: white;
 }
 .servicios ul {
   list-style: none;  /* 👈 quita las viñetas */
@@ -225,12 +305,210 @@ background-color: #ff4da6;
   margin: 0;
 }
 
-/* Responsivo: botón centrado en móviles */
+#listaComentarios {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cta{
+  background-color: #ff4da6;
+}
+
+.testimonio {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonio p {
+  font-style: italic;
+}
+
+.testimonio span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff4da6;
+}
+.experiencia {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* FORM EXPERIENCIA */
+form#formExperiencia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* INPUTS, TEXTAREA Y SELECT */
+form#formExperiencia input,
+form#formExperiencia textarea,
+form#formExperiencia select {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* TEXTAREA ajuste */
+form#formExperiencia textarea {
+  resize: none;
+}
+
+/* BOTÓN */
+form#formExperiencia .btn {
+  align-self: center;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #ff4da6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.prefooter{
+  background-color: #f6bbcb;
+}
+
+.prefooter-features{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.prefooter-feature{
+  flex: 0 0 calc(50% - 20px); /* 👈 2 por fila */
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.prefooter-feature img{
+  width: 80px;
+  margin-bottom: 10px;
+}
+/* Fuente (recuerda poner el link en el HTML) */
+.prefooter-dos {
+  font-family: 'Fredoka', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+
+  background-color: #f6bbcb; /* tu color */
+}
+
+/* Título principal */
+.prefooter-dos h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #6b0661;
+}
+
+/* GRID */
+.prefooter-dos .features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Tarjetas */
+.prefooter-dos .feature {
+  overflow: hidden;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Imágenes */
+.prefooter-dos .feature img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.prefooter-dos .feature img:hover {
+  transform: scale(1.05);
+}
+
+/* Texto debajo de imagen */
+.prefooter-dos .feature h1 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #6b0661;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* Tablet */
+@media (max-width: 900px) {
+  .prefooter-dos .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+
 /* Responsivo: inputs y botón en móviles */
 @media (max-width: 768px) {
   form#formLead input,
   form#formLead .btn {
     width: 90%;       /* casi todo el ancho en móviles */
     align-self: center; /* centrar botón (y otros elementos si aplica) */
+  }
+    .servicios ul {
+    grid-template-columns: 1fr; /* 1 por fila */
+  }
+
+  .servicios li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+     margin-left: 0;
+  }
+
+  .servicios li img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #listaComentarios {
+    grid-template-columns: 1fr;
+  }
+ .prefooter-feature{
+    flex: 0 0 100%;
+  }
+ .prefooter-dos .features {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    justify-items: center; /* 👈 centra cada item dentro del grid */
+  }
+
+  .prefooter-dos .feature {
+    width: 100%;
+    max-width: 300px; /* 👈 limita ancho para que se vea centrado */
+  }
+
+  .prefooter-dos .feature img {
+    width: 100%;
+    height: 180px;
   }
 }

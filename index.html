@@ -17,6 +17,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TJFG2HZZ');</script>
 <!-- End Google Tag Manager -->
 
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -35,7 +37,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HERO -->
 
-  <section class="hero">
+  <section id="hero" class="hero">
   <h2 id="saludo" class="saludo"></h2>
 
  <div class="carousel-container">
@@ -72,25 +74,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- BENEFICIOS -->
-<section>
+  <section class="prefooter">
   <h2>¿Por qué elegir BELLEZA?</h2>
   <div class="features">
     <div class="feature"><img src="icon/chat.png" alt=""><h2>Reserva sin complicaciones</h2><br>
-    Agenda tu cita fácilmente desde cualquier lugar, sin perder tiempo.</div>
-    <div class="feature"><img src="icon/dialog.png" alt=""><h2>Atención rápida y sin <esperas></h2><br>
-    Olvídate de filas o retrasos, tu tiempo es prioridad.</div>
+  Agenda tu cita fácilmente desde cualquier lugar, sin perder tiempo.</div>
+    <div class="feature"><img src="icon/dialog.png" alt=""><h2>Atención rápida y sin esperas</h2><br>
+  Olvídate de filas o retrasos, tu tiempo es prioridad.</div>
     <div class="feature"><img src="icon/booking.png" alt=""><h2>Funciona como una app en tu celular</h2><br>
-    Accede rápido, sin instalar nada y desde cualquier dispositivo.</div>
-        <div class="feature"><img src="icon/communication.png" alt=""><h2>Servicios profesionales y confiables</h2><br>
-    Trabajamos con expertos para garantizar resultados de calidad.</div>
-       <div class="feature"><img src="icon/quality.png" alt=""><h2>Experiencia cómoda y segura</h2><br>
-    Diseñado para que te sientas tranquila en cada paso.</div>
+  Accede rápido, sin instalar nada y desde cualquier dispositivo.</div>
+    <div class="feature"><img src="icon/communication.png" alt=""><h2>Servicios profesionales y confiables</h2><br>
+  Trabajamos con expertos para garantizar resultados de calidad.</div>
+    <div class="feature"><img src="icon/quality.png" alt=""><h2>Experiencia cómoda y segura</h2><br>
+  Diseñado para que te sientas tranquila en cada paso.</div>
   </div>
-</section>
+  </section>>
 
 <!-- CTA INTERMEDIO -->
-<section class="cta">
-  <h2>Registrate y recive descuentos en todos nuestros servicios</h2><br>
+<section id="cta" class="cta">
+  <h2>Registrate y recibe descuentos en todos nuestros servicios</h2><br>
   <p>Es por poco tiempo</p> <br>
 
   <form id="formLead" action="https://formspree.io/f/mykbojqy" method="POST">
@@ -104,8 +106,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <button type="submit" class="btn">Enviar</button>
   </form>
-
+</section>
 <!-- EXPLICACIÓN -->
+
 
   <section class="servicios">
   <h2>Servicios de belleza</h2>
@@ -113,10 +116,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p><h2>En BELLEZA pensamos en tu comodidad, encontrarás servicios como:</h2></p>
 
   <ul>
-    <li> <h3>Manicure y pedicure</h3></li>
-    <li> <h3>Arreglo de tus cejas</h3></li>
-    <li> <h3>Depilación profesional</h3></li>
-    <li> <h3>Arreglo de tus cejas</h3></li>
+    <li><img src="icon/manicure.png" alt=""> <h3>Manicure y pedicure</h3></li>
+    <li> <img src="icon/arreglo-cejas.png" alt=""><h3>Arreglo de tus cejas</h3></li>
+    <li> <img src="icon/depilacion-corporal.png" alt=""> <h3>Depilación profesional</h3></li>
+    <li> <img src="icon/extenciones.png" alt=""><h3>Arreglo de tus pestañas, extensiones</h3></li>
   </ul>
 
   <p>
@@ -126,51 +129,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </p>
 </section>
 
-<!-- TESTIMONIOS -->
-<section class="testimonials">
-  <h2>Lo que dicen nuestras usuarias</h2>
-  <p>"Muy fácil de usar y súper rápida" ⭐⭐⭐⭐⭐</p>
-  <p>"Me encanta reservar sin llamar" ⭐⭐⭐⭐⭐</p>
+<!-- TESTIMONIOS --><section class="testimonials">
+
+  <h2>Cuéntanos tu experiencia</h2>
+  <p>Tu opinión es muy importante para nosotros</p>
+
+  <form id="formExperiencia">
+    <input type="text" placeholder="Tu nombre" required>
+
+    <textarea placeholder="Escribe tu experiencia..." rows="4" required></textarea>
+
+    <label>Calificación:</label>
+    <select required>
+      <option value="">Selecciona</option>
+      <option>⭐</option>
+      <option>⭐⭐</option>
+      <option>⭐⭐⭐</option>
+      <option>⭐⭐⭐⭐</option>
+      <option>⭐⭐⭐⭐⭐</option>
+    </select>
+
+    <button type="submit" class="btn">Enviar opinión</button>
+  </form>
+
+  <!-- 👇 AQUÍ se verán los comentarios -->
+  <div id="listaComentarios"></div>
+
 </section>
 
 <!-- CTA INTERMEDIO -->
 <section class="cta">
   <h2>No esperes más, Consientete queremos que realces tu belleza</h2>
-  <a href="https://fontecha011137.github.io/PWA_BELLEXZA/" class="btn">
-    Probar gratis
-  </a>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <h2>Preguntas frecuentes</h2>
-
-  <h4>¿Tiene costo?</h4>
-  <p>No, puedes usarla gratis.</p>
-
-  <h4>¿Necesito descargarla?</h4>
-  <p>No, puedes usarla desde el navegador o instalarla.</p>
-
-  <h4>¿Funciona en celular?</h4>
-  <p>Sí, está optimizada para móviles.</p>
-</section>
-
-<!-- PRE FOOTER -->
-<section class="prefooter">
-  <h2>Empieza hoy con BELLEZA</h2>
-  <a href="https://fontecha011137.github.io/PWA_BELLEXZA/" class="btn">
-    Ir a la app
-  </a>
-</section>
-<section class="prefooter-dos">
-   <div class="logo">
-    <img src="logo.png" alt="BELLEXZA logo">
-  </div>
-  <h2>Belleza es una página pensada para ti</h2>
-  <p>Queremos atenderte como te mereces</p> 
-</section>
-
-<section class="cta">
   <h2>Déjanos tus datos</h2>
   <form id="formLead" action="https://formspree.io/f/mykbojqy" method="POST">
     
@@ -184,10 +173,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button type="submit" class="btn">Enviar</button>
   </form>
 </section>
+
+<!-- FAQ -->
+<section class="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Tiene costo usar la app?</button>
+    <div class="faq-answer">
+      <p>No, puedes usar nuestra plataforma de forma totalmente gratuita para agendar tus citas. 
+      Algunos servicios tienen costo según el tratamiento que elijas.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Necesito descargar la aplicación?</button>
+    <div class="faq-answer">
+      <p>No es obligatorio. Puedes usarla directamente desde tu navegador o instalarla como app 
+      para mayor comodidad y acceso rápido.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Funciona en celular?</button>
+    <div class="faq-answer">
+      <p>Sí, la plataforma está completamente optimizada para dispositivos móviles, tablets 
+      y computadores.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Cómo puedo agendar una cita?</button>
+    <div class="faq-answer">
+      <p>Solo debes ingresar, elegir el servicio, seleccionar la fecha disponible 
+      y confirmar tu cita en pocos pasos.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Puedo cancelar o reprogramar?</button>
+    <div class="faq-answer">
+      <p>Sí, puedes hacerlo desde tu cuenta antes de la cita sin ningún problema.</p>
+    </div>
+  </div>
+
+</section>
+<!-- PRE FOOTER -->
+<section class="prefooter-dos">
+  <h2>¡Elige BELLEZA!</h2>
+
+  <div class="features">
+
+    <a href="#cta" class="feature">
+      <img src="img/cejas.jpg" alt="Cejas">
+      <h1>Cejas</h1>
+    </a>
+
+    <a href="#cta" class="feature">
+      <img src="img/decorado.jpg" alt="Decoración">
+      <h1>Decoración</h1>
+    </a>
+
+    <a href="#cta" class="feature">
+      <img src="img/depilacion.jpg" alt="Depilación">
+      <h1>Depilación</h1>
+    </a>
+
+    <a href="#cta" class="feature">
+      <img src="img/pestañas.jpg" alt="Extensiones de pestañas">
+      <h1>Extensiones</h1>
+    </a>
+
+  </div>
+</section>
 <!-- FOOTER -->
  <!-- Formspree ( donde esta alojada la informacion captada por la pagina) -->
-<footer>
+  <footer>
   <p>© 2026 BELLEZA</p>
+
+  <a href="#hero" class="btn-top">Volver arriba</a>
 </footer>
 
 <script src="index.js"></script>
