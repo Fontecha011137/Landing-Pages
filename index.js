@@ -129,3 +129,15 @@ document.querySelectorAll(".faq-question").forEach(btn => {
       answer.style.display === "block" ? "none" : "block";
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookie-banner");
+  const btn = document.getElementById("acceptCookies");
+
+  // ⚠️ prueba: forzar que aparezca
+  banner.style.display = "flex";
+
+  btn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAceptadas", "true");
+    banner.style.display = "none";
+  });
+});

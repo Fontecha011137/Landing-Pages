@@ -457,6 +457,37 @@ form#formExperiencia .btn {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px; /* 👈 ya no pegado totalmente abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: #ff4da6;
+  color: white;
+  padding: 15px 20px;
+  display: none; /* 👈 oculto por defecto */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  z-index: 9999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.cookie-banner button {
+  background: white;
+  color: #ff4da6;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cookie
 /* Tablet */
 @media (max-width: 900px) {
   .prefooter-dos .features {
