@@ -42,7 +42,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="logo">
     <img src="logo.png" alt="BELLEXZA logo">
   </div>
-  <a href="https://fontecha011137.github.io/PWA_BELLEXZA/">Abrir App</a>
+  <a href="https://fontecha011137.github.io/PWA_BELLEXZA/"
+onclick="gtag('event','abrir_app');">
+Abrir App
+</a>
   
 </header>
 
@@ -105,8 +108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="cta" class="cta">
   <h2>Registrate y recibe descuentos en todos nuestros servicios</h2><br>
   <p>Es por poco tiempo</p> <br>
-
-  <form id="formLead" action="https://formspree.io/f/mykbojqy" method="POST">
+<form id="formLead" onsubmit="gtag('event','registro_usuario');"action="https://formspree.io/f/mykbojqy" method="POST">
     
     <input type="text" name="nombre" placeholder="Nombre" required>
     <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -145,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Cuéntanos tu experiencia</h2>
   <p>Tu opinión es muy importante para nosotros</p>
 
-  <form id="formExperiencia">
+  <form id="formExperiencia" onsubmit="gtag('event','enviar_opinion');">
     <input type="text" placeholder="Tu nombre" required>
 
     <textarea placeholder="Escribe tu experiencia..." rows="4" required></textarea>
@@ -172,6 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta">
   <h2>No esperes más, Consientete queremos que realces tu belleza</h2>
   <h2>Déjanos tus datos</h2>
+  
   <form id="formLead" action="https://formspree.io/f/mykbojqy" method="POST">
     
     <input type="text" name="nombre" placeholder="Nombre" required>
@@ -190,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Preguntas frecuentes</h2>
 
   <div class="faq-item">
-    <button class="faq-question">¿Tiene costo usar la app?</button>
+    <button class="faq-question" onclick="gtag('event','abrir_faq');">¿Tiene costo usar la app?</button>
     <div class="faq-answer">
       <p>No, puedes usar nuestra plataforma de forma totalmente gratuita para agendar tus citas. 
       Algunos servicios tienen costo según el tratamiento que elijas.</p>
@@ -198,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">¿Necesito descargar la aplicación?</button>
+    <button class="faq-question" onclick="gtag('event','abrir_faq');">¿Necesito descargar la aplicación?</button>
     <div class="faq-answer">
       <p>No es obligatorio. Puedes usarla directamente desde tu navegador o instalarla como app 
       para mayor comodidad y acceso rápido.</p>
@@ -206,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">¿Funciona en celular?</button>
+    <button class="faq-question" onclick="gtag('event','abrir_faq');">¿Funciona en celular?</button>
     <div class="faq-answer">
       <p>Sí, la plataforma está completamente optimizada para dispositivos móviles, tablets 
       y computadores.</p>
@@ -214,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">¿Cómo puedo agendar una cita?</button>
+    <button class="faq-question" onclick="gtag('event','abrir_faq');">¿Cómo puedo agendar una cita?</button>
     <div class="faq-answer">
       <p>Solo debes ingresar, elegir el servicio, seleccionar la fecha disponible 
       y confirmar tu cita en pocos pasos.</p>
@@ -222,7 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">¿Puedo cancelar o reprogramar?</button>
+    <button class="faq-question" onclick="gtag('event','abrir_faq');">¿Puedo cancelar o reprogramar?</button>
     <div class="faq-answer">
       <p>Sí, puedes hacerlo desde tu cuenta antes de la cita sin ningún problema.</p>
     </div>
@@ -262,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer>
   <p>© 2026 BELLEZA</p>
 
-  <a href="#hero" class="btn-top">Volver arriba</a>
+ <a href="#hero" class="btn-top" onclick="gtag('event','volver_arriba');"> Volver arriba </a>
 </footer>
 
 <script src="index.js"></script>
