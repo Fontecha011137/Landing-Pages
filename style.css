@@ -458,36 +458,56 @@ form#formExperiencia .btn {
   letter-spacing: 1px;
 }
 
-
 .cookie-banner {
   position: fixed;
-  bottom: 20px; /* 👈 ya no pegado totalmente abajo */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 600px;
   background: #ff4da6;
   color: white;
   padding: 15px 20px;
-  display: none; /* 👈 oculto por defecto */
-  justify-content: space-between;
-  align-items: center;
   border-radius: 12px;
-  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 600px;
+  width: 90%;
+
+  z-index: 2147483647; /* 🔥 máximo */
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.cookie-banner button {
+/* Botones */
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-accept {
   background: white;
   color: #ff4da6;
   border: none;
-  padding: 10px 15px;
+  padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
 }
 
-.cookie
+.btn-reject {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔥 CLAVE: asegura clicks */
+.cookie-banner,
+.cookie-banner * {
+  pointer-events: auto;
+}
 /* Tablet */
 @media (max-width: 900px) {
   .prefooter-dos .features {

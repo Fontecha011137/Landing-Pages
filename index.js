@@ -129,15 +129,28 @@ document.querySelectorAll(".faq-question").forEach(btn => {
       answer.style.display === "block" ? "none" : "block";
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const banner = document.getElementById("cookie-banner");
-  const btn = document.getElementById("acceptCookies");
 
-  // ⚠️ prueba: forzar que aparezca
+document.addEventListener("DOMContentLoaded", function () {
+
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("acceptCookies");
+  const rejectBtn = document.getElementById("rejectCookies");
+
+  // 🔥 FORZAR VISIBILIDAD PARA PRUEBA
   banner.style.display = "flex";
 
-  btn.addEventListener("click", () => {
-    localStorage.setItem("cookiesAceptadas", "true");
+  // Aceptar
+  acceptBtn.onclick = function () {
+    alert("click aceptar"); // prueba
+    localStorage.setItem("cookiesDecision", "accepted");
     banner.style.display = "none";
-  });
+  };
+
+  // Rechazar
+  rejectBtn.onclick = function () {
+    alert("click rechazar"); // prueba
+    localStorage.setItem("cookiesDecision", "rejected");
+    banner.style.display = "none";
+  };
+
 });
